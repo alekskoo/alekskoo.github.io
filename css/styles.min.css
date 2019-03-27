@@ -31,6 +31,7 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 25px;
+  line-height: 35px;
 }
 
 
@@ -73,34 +74,27 @@ header .wrapper .soc-icons img {
 header .wrapper .geo {
   color: #fff;
   font: 22px/22px 'Roboto', sans-serif;
-  display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
-  grid-column-gap: 9px;
-  grid-row-gap: 5px;
+  position: relative;
+  display: flex;
+  flex-flow: column;
 }
 
-header .wrapper .geo img {
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 1;
-  grid-column-end: 1;
+header .wrapper .geo::before {
+  content: url(../images/placeholder.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -30px;
 }
 
 header .wrapper .geo address {
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 2;
-  grid-column-end: 2;
   font-style: normal;
 }
 
 header .wrapper .geo span {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
+  margin-top: 10px;
 }
+
 
 header .wrapper .phones {
   display: flex;
@@ -119,8 +113,60 @@ header .wrapper .phones .phone1 {
 header .wrapper .phones a {
   color: #fff;
   text-decoration: none;
-  font: bold 23px/0px 'Roboto', sans-serif;
+  font: bold 23px 'Roboto', sans-serif;
   margin-right: 42px;
+}
+
+/*nav style*/
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-top: 44px;
+  margin-left: 15px;
+}
+
+header nav ul li {
+  margin-right: 78px;
+}
+
+header nav ul li a {
+  font: 500 25px/35px 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+header nav ul li a:hover {
+  color: #ff4747;
+  border-bottom: 2px solid #ff4747;
+  padding-bottom: 13px;
+}
+
+/*catalog style*/
+.main .wrapper .catalog .services {
+  position: relative;
+}
+
+.main .wrapper .catalog .services img {
+  border-radius: 5px;
+}
+
+.main .wrapper .catalog .services .services-text {
+  position: absolute;
+  top: 149px;
+  left:19px;
+  color: #fff;
+  font: 500 25px/35px 'Roboto', sans-serif;
+  max-width: 130px;
+}
+
+.main .wrapper .catalog .services .arrow {
+  background-image: url(../images/catalog/Arrow.png);
+  width: 25px;
+  height: 16px;
+  position: absolute;
+  top: 156px;
+  left: 265px;
 }
 
 

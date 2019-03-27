@@ -1,15 +1,3 @@
-<!--
-
-╔╔╗╔╔╔═╔═  ╔╗╦║║╦╗╦╔╗
-║║║╠╠╠═╠═  ╚╗║║║║║║║║
-╚╚╝║║╚═╚═  ╚╝║╚╝╩╝╩╚╝
-
-www.coffeestudio.ru
-support: web@coffeestudio.ru
-creature: 2018
-
--->
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -23,18 +11,19 @@ creature: 2018
   <meta name="description" content="AutoIQ: автосервис в Пскове">
   <meta name="keywords" content="AutoIQ: автосервис в Пскове">
 
-  <link href="css/styles.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/styles.min.css" type="text/css" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css/responsive.css"> -->
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="AutoDent: удаление вмятин без покраски, полировка в Пскове">
-  <meta property="og:title" content="AutoDent: удаление вмятин без покраски, полировка в Пскове">
-  <meta property="og:description" content="AutoDent: удаление вмятин без покраски, полировка в Пскове">
-  <meta property="og:image" content="AutoDent: удаление вмятин без покраски, полировка в Псковеimages/og-image.jpg">
+  <meta property="og:url" content="AutoIQ: автосервис в Пскове">
+  <meta property="og:title" content="AutoIQ: автосервис в Пскове">
+  <meta property="og:description" content="AutoIQ: автосервис в Пскове">
+  <meta property="og:image" content="AutoIQ: автосервис в Псковеimages/og-image.jpg"> <!-- разобраться с этой штукой -->
   <meta property="og:image:width" content="600">
   <meta property="og:image:height" content="600">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png"> <!-- не забыть про фавиконы -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/favicon.webmanifest">
@@ -57,20 +46,26 @@ creature: 2018
           </a>
 
           <div class="soc-icons">
-            <img src="images/vk.svg" alt="vk">
+            <a href="#">
+              <img src="images/vk.svg" alt="vk">
+            </a>
+            <a href="#" class="">
             <img src="images/youtube.svg" alt="youtube">
+            </a>
+            <a href="#">
             <img src="images/inst.svg" alt="instagram">
+            </a>
           </div>
 
           <div class="geo">
-            <img src="images/placeholder.svg" alt="placeholder">
+            <!-- <img src="images/placeholder.svg" alt="placeholder"> -->
             <address>Адрес: Псков, ул. Советская, 51</address>
             <span>(Въезд  с ул. Калинина 26)</span>
           </div>
 
           <div class="phones">
             <div class="phone1">
-              <img src="images/phone-receiver.svg" alt="phone-receiver">
+              <img src="images/phone-receiver.svg" alt="phone-receiver" class="phone-receiver">
               <a href="tel:+78112606095">8 (8112) 60-60-95</a>
             </div>
             <div class="phone2">
@@ -84,9 +79,9 @@ creature: 2018
         <nav>
             <ul>
               <li><a href="/">Главная</a></li>
-              <li><a href="services.html">Услуги</a></li>
-              <li><a href="gallery.html">Фотогалерея</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="services.html">Эвакуатор</a></li>
+              <li><a href="gallery.html">Автозапчасти</a></li>
+              <li><a href="contacts.html">О сервисе</a></li>
             </ul>
 
             <div class="mobile-menu">
@@ -97,6 +92,22 @@ creature: 2018
 
       <section class="main">
         <div class="wrapper">
+          <div class="catalog">
+            <div class="services">
+              <a href="#"><img src="images/catalog/01.jpg" alt="Кузовной ремонт"></a>
+              <div class="services-text">
+                <a href="#">Кузовной ремонт</a>
+              </div>
+              <a href="#" class="arrow"></a>
+            </div>
+            <div class="services"></div>
+            <div class="services"></div>
+            <div class="services"></div>
+            <div class="services"></div>
+            <div class="services"></div>
+            <div class="services"></div>
+            <div class="services"></div>
+          </div>
           
         </div>
       </section>
@@ -129,41 +140,6 @@ creature: 2018
     </div>
   </div>
 
-  <div id="write-us-modal" class="modal mfp-hide">
-    <h5>Написать нам</h5>
-  <!--   <form class="ajax-form" action="formdata.php" method="post" enctype="multipart/form-data" id="write_us_modal">
 
-      <label for="name">
-        <span>Ваше имя<span class="req">*</span></span>
-        <input type="text" name="name" id="name" placeholder="Ваше имя" required>
-      </label>
-
-      <label for="phone">
-        <span>Телефон<span class="req">*</span></span>
-        <input type="text" name="phone" id="phone" placeholder="Ваш телефон" required>
-      </label>
-
-      <label for="email">
-        <span>E-mail</span>
-        <input type="text" name="email" id="email" placeholder="Ваш e-mail">
-      </label>
-
-      <label for="message">
-        <span>Сообщение</span>
-        <textarea name="message" id="message" placeholder="Ваше сообщение"></textarea>
-      </label>
-
-      <label for="file">
-        <span>Фотография повреждения</span>
-        <input type="file" name="file" id="file" class="file-js">
-      </label>
-
-      <p class="privacy">Я согласен с <a href="privacy.html">политикой конфиденциальности</a></p>
-
-      <input type="submit" onsubmit="preventDefault();" value="Отправить" class="btn"> -->
-
-    </form>
-  </div>
- 
 </body>
 </html>

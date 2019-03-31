@@ -1,6 +1,21 @@
 @charset "UTF-8";
 
+/*fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext');
+
+/*@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.svg#Roboto-Bold") format("svg"), url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }*/
 
 
 /*common styles*/
@@ -8,6 +23,7 @@
 body {
   max-width: 1440px;
   margin:0 auto;
+  background: #c1c1c1;
 }
 
 .main-text {
@@ -40,7 +56,7 @@ h3 {
 header .wrapper {
   background: #1c1c1c;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -48,8 +64,9 @@ header .wrapper .logo {
   display: flex;
   flex-flow: column wrap;
   margin-top: 10px;
-  margin-left: 40px;
+  margin-left: 4.65%;
   margin-bottom: 30px;
+  margin-right: 3.2%;
 }
 
 header .wrapper a {
@@ -62,21 +79,34 @@ header .wrapper .logo .text {
 }
 
 header .wrapper .soc-icons {
+  margin-right: 15.9%;
+}
+
+header .wrapper .soc-icons ul {
   display: flex;
   justify-content: space-between;
 }
 
-header .wrapper .soc-icons img {
-  margin-left: 12px;
-  margin-right: 12px;
+header .wrapper .soc-icons li ~ li {
+  padding-left: 10%;
 }
 
+/*header .wrapper .soc-icons li a img {
+  display: block;
+}
+*/
 header .wrapper .geo {
   color: #fff;
   font: 22px/22px 'Roboto', sans-serif;
   position: relative;
   display: flex;
   flex-flow: column;
+  margin-right: 12.8%;
+}
+
+header .wrapper .geo a {
+  text-decoration: none;
+  color: #fff;
 }
 
 header .wrapper .geo::before {
@@ -87,8 +117,13 @@ header .wrapper .geo::before {
   left: -30px;
 }
 
-header .wrapper .geo address {
+header .wrapper .geo address p {
   font-style: normal;
+  margin:0;
+}
+
+header .wrapper .geo address p:first-child {
+  padding-bottom: 10px;
 }
 
 header .wrapper .geo span {
@@ -101,11 +136,6 @@ header .wrapper .phones {
   flex-flow: column wrap;
 }
 
-header .wrapper .phones img {
-  width: 20px;
-  margin-right: 15px;
-}
-
 header .wrapper .phones .phone1 {
   margin-bottom: 15px;
 }
@@ -114,7 +144,15 @@ header .wrapper .phones a {
   color: #fff;
   text-decoration: none;
   font: bold 23px 'Roboto', sans-serif;
-  margin-right: 42px;
+  position: relative;
+}
+
+header .wrapper .phones a::before {
+  content: url(../images/phone-receiver.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -30px;
 }
 
 /*nav style*/
@@ -123,7 +161,8 @@ header nav ul {
   display: flex;
   list-style-type: none;
   margin-top: 44px;
-  margin-left: 15px;
+  margin-left: 5%;
+  margin-bottom: 67px;
 }
 
 header nav ul li {
@@ -136,6 +175,12 @@ header nav ul li a {
   color: #000;
 }
 
+header nav ul li.active a {
+  color: #ff4747;
+  border-bottom: 2px solid #ff4747;
+  padding-bottom: 13px;
+}
+
 header nav ul li a:hover {
   color: #ff4747;
   border-bottom: 2px solid #ff4747;
@@ -143,34 +188,306 @@ header nav ul li a:hover {
 }
 
 /*catalog style*/
-.main .wrapper .catalog .services {
-  position: relative;
+
+main .wrapper .catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 306px);
+  grid-gap: 39px;
+  justify-content: center;
+  margin-bottom: 75px;
 }
 
-.main .wrapper .catalog .services img {
+
+main .wrapper .catalog .services {
+  position: relative;
+  max-width: 306px;
+  max-height: 233px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.25);
   border-radius: 5px;
 }
 
-.main .wrapper .catalog .services .services-text {
+main .wrapper .catalog .services::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(29, 29, 31, 0.656) 0%, rgba(0, 0, 0, 0.22304) 100%);
+  border-radius: 5px;
+}
+
+main .wrapper .catalog .services:hover::before {
+  background: linear-gradient(0deg, rgba(30, 30, 36, 0.95) 0%, rgba(0, 0, 0, 0.665) 100%);
+  border-radius: 5px;
+}
+
+main .wrapper .catalog .services img {
+  border-radius: 5px;
+}
+
+main .wrapper .catalog a .services h3 {
   position: absolute;
   top: 149px;
   left:19px;
   color: #fff;
   font: 500 25px/35px 'Roboto', sans-serif;
   max-width: 130px;
+  margin:0;
+  padding:0;
 }
 
-.main .wrapper .catalog .services .arrow {
-  background-image: url(../images/catalog/Arrow.png);
+main .wrapper .catalog a .services h3:hover {
+  color: #ff4747;
+}
+
+main .wrapper .catalog a .services h3::after {
+  content:"";
+  background-image: url(../images/catalog/Arrows.png);
   width: 25px;
   height: 16px;
+  background-position: 0% 0%;
   position: absolute;
-  top: 156px;
-  left: 265px;
+  top:9px;
+  left: 252px;
+}
+
+main .wrapper .catalog a .services h3:hover::after {
+  background-image: url(../images/catalog/Arrows.png);
+  background-position: 0% 100%;
 }
 
 
+/*masters style*/
 
+.masters {
+  background: url(../images/masters-back.png);
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.masters h2 {
+  text-align: center;
+  padding-top: 66px;
+  margin-bottom: 22px;
+}
+
+.masters-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1153px;
+  margin: 0 auto;
+}
+
+.masters-content img {
+  margin-right: 12%;
+}
+
+.masters-content .masters-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 42px;
+  color: #727272;
+}
+
+
+/*form style*/
+
+.form {
+  background: linear-gradient(180deg, rgba(17, 17, 18, 0.52) 0%, rgba(51, 51, 51, 0) 100%),url(../images/form-back.png);
+  margin-bottom: 77px;
+}
+
+
+.form h2 {
+  padding-top: 80px;
+  margin-left: 3.68%;
+  color: #ff4747;
+}
+
+.form form {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 78px;
+}
+
+.form form .form-name {
+  margin-left: 3.4%; 
+}
+
+.form form .form-name ~ div {
+  margin-left: 2.92%; 
+}
+
+.form form p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #fff;
+  padding-left: 9px;
+}
+
+.form form div input {
+  background: rgba(255, 255, 255, 0.98);
+  width: 300px;
+  height: 72px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 37px;
+  border: 0 none;
+}
+
+.form form div input::-webkit-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    text-indent: 32px;
+    opacity: 0.48;
+}
+
+.form form div input:-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    text-indent: 32px;
+    opacity: 0.48;
+}
+
+.form form div input::-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    text-indent: 32px;
+    opacity: 0.48;
+}
+
+.form form div input::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    text-indent: 32px;
+    opacity: 0.48;
+}
+
+.form form div input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form form div input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form form div input:focus::-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form form div input:focus::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form form button {
+  background: #ff4747;
+  border: 0 none;
+  width: 316px;
+  height: 78px;
+  border-radius: 37px;
+  align-self: flex-end;
+  margin-left: 2.92%;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+
+/*advantages style*/
+
+.advantages {
+  margin-bottom: 71px;
+}
+
+.advantages h2 {
+  text-align: center;
+  margin-bottom: 91px;
+}
+
+.advantages .advantages-grid {
+  display: grid;
+  grid-template-columns: minmax(max-content, 658px) minmax(max-content, 476px);
+  justify-content: center;
+  grid-row-gap: 86px;
+  grid-column-gap: 80px;
+  margin-bottom: 71px;
+}
+
+.advantages .advantages-grid .advantages-item {
+  display: flex;
+  align-items: center;
+}
+
+.advantages .advantages-grid .advantages-item img {
+  width: 55px;
+  height: 61px;
+  background: #fff;
+  background-size: 100px 100px;
+  border-radius: 50%;
+  padding: 19.5px 22.5px;
+}
+
+.advantages .advantages-grid .advantages-item span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #444247;
+  padding-left: 36px;
+}
+
+
+/*howtoget style*/
+
+.howtoget h2 {
+  color: #ff4747;
+  text-align: center;
+}
+
+.howtoget .howtoget-steps {
+  display: flex;
+}
+
+.howtoget .howtoget-steps .howtoget-steps--1 {
+  position: relative;
+}
+
+.howtoget .howtoget-steps .howtoget-steps--1 p {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 500;
+  position: absolute;
+  top:20px;
+  left:20px;
+}
 
 
 

@@ -444,6 +444,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps {
   display: flex;
   margin-bottom: 72px;
+  justify-content: center;
 }
 
 .howtoget .howtoget-steps .howtoget-steps--1,

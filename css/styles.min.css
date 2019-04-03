@@ -7,9 +7,12 @@
 /*common styles*/
 
 body {
-  max-width: 1440px;
-  margin:0 auto;
   background: url(../images/common-back.png);
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -59,6 +62,7 @@ header .wrapper .logo .text {
 
 header .wrapper .soc-icons {
   margin-right: 15.9%;
+  min-width: 151px;
 }
 
 header .wrapper .soc-icons ul {
@@ -66,8 +70,9 @@ header .wrapper .soc-icons ul {
   justify-content: space-between;
 }
 
-header .wrapper .soc-icons li ~ li {
-  padding-left: 10%;
+header .wrapper .soc-icons li a img {
+  width: 37px;
+  height: 37px;
 }
 
 header .wrapper .geo {
@@ -76,7 +81,7 @@ header .wrapper .geo {
   position: relative;
   display: flex;
   flex-flow: column;
-  margin-right: 12.8%;
+  margin-right: 14.0%;
 }
 
 header .wrapper .geo a {
@@ -159,6 +164,10 @@ header nav ul li a:hover {
   color: #ff4747;
   border-bottom: 2px solid #ff4747;
   padding-bottom: 13px;
+}
+
+header nav .mobile-menu {
+  display: none;
 }
 
 /*catalog style*/
@@ -311,6 +320,12 @@ main .wrapper .catalog a .services h3:hover::after {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 37px;
   border: 0 none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  text-indent: 32px;
+  outline: none;
 }
 
 .form form div input::-webkit-input-placeholder {
@@ -419,13 +434,20 @@ main .wrapper .catalog a .services h3:hover::after {
   align-items: center;
 }
 
-.advantages .advantages-grid .advantages-item img {
-  width: 55px;
-  height: 61px;
+.advantages .advantages-grid .advantages-item .advantages-item--icon {
   background: #fff;
-  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  padding: 19.5px 22.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages .advantages-grid .advantages-item img {
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 .advantages .advantages-grid .advantages-item span {
@@ -443,6 +465,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget h2 {
   color: #ff4747;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .howtoget .howtoget-steps {
@@ -586,6 +609,13 @@ main .wrapper .catalog a .services h3:hover::after {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 37px;
   border: 0 none;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  text-indent: 32px;
+  outline: none;
 }
 
 .form2 form div input::-webkit-input-placeholder {

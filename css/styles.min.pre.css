@@ -37,14 +37,25 @@ h3 {
 
 header .wrapper {
   background: #1c1c1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .wrapper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin-top: 10px;
   margin-left: 4.65%;
   margin-bottom: 30px;
@@ -66,8 +77,12 @@ header .wrapper .soc-icons {
 }
 
 header .wrapper .soc-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .wrapper .soc-icons li a img {
@@ -79,8 +94,13 @@ header .wrapper .geo {
   color: #fff;
   font: 22px/22px 'Roboto', sans-serif;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   margin-right: 14.0%;
 }
 
@@ -111,8 +131,13 @@ header .wrapper .geo span {
 }
 
 header .wrapper .phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 header .wrapper .phones .phone1 {
@@ -141,6 +166,8 @@ header .wrapper .mobile-menu {
 /*nav style*/
 
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin-top: 44px;
@@ -173,10 +200,14 @@ header nav ul li a:hover {
 /*catalog style*/
 
 main .wrapper .catalog {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 306px 39px 306px 39px 306px 39px 306px;
   grid-template-columns: repeat(4, 306px);
   grid-gap: 39px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 75px;
 }
 
@@ -185,8 +216,10 @@ main .wrapper .catalog .services {
   position: relative;
   max-width: 306px;
   max-height: 233px;
-  box-sizing: border-box;
-  box-shadow: 0 3px 4px rgba(0,0,0,0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.25);
+          box-shadow: 0 3px 4px rgba(0,0,0,0.25);
   border-radius: 5px;
 }
 
@@ -197,11 +230,17 @@ main .wrapper .catalog .services::before {
   left:0;
   right: 0;
   bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 29, 31, 0.656)), to(rgba(0, 0, 0, 0.22304)));
+  background: -webkit-linear-gradient(bottom, rgba(29, 29, 31, 0.656) 0%, rgba(0, 0, 0, 0.22304) 100%);
+  background: -o-linear-gradient(bottom, rgba(29, 29, 31, 0.656) 0%, rgba(0, 0, 0, 0.22304) 100%);
   background: linear-gradient(0deg, rgba(29, 29, 31, 0.656) 0%, rgba(0, 0, 0, 0.22304) 100%);
   border-radius: 5px;
 }
 
 main .wrapper .catalog .services:hover::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(30, 30, 36, 0.95)), to(rgba(0, 0, 0, 0.665)));
+  background: -webkit-linear-gradient(bottom, rgba(30, 30, 36, 0.95) 0%, rgba(0, 0, 0, 0.665) 100%);
+  background: -o-linear-gradient(bottom, rgba(30, 30, 36, 0.95) 0%, rgba(0, 0, 0, 0.665) 100%);
   background: linear-gradient(0deg, rgba(30, 30, 36, 0.95) 0%, rgba(0, 0, 0, 0.665) 100%);
   border-radius: 5px;
 }
@@ -257,16 +296,23 @@ main .wrapper .catalog a .services h3:hover::after {
 }
 
 .masters-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1153px;
   margin: 0 auto;
 }
 
 .masters-content img {
-  width: 350px;
   margin-right: 12%;
+  width: 350px;
+  height: 463px;
 }
 
 .masters-content .masters-text {
@@ -280,6 +326,9 @@ main .wrapper .catalog a .services h3:hover::after {
 /*form style*/
 
 .form {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 18, 0.52)), to(rgba(51, 51, 51, 0))),url(../images/form-back.png);
+  background: -webkit-linear-gradient(top, rgba(17, 17, 18, 0.52) 0%, rgba(51, 51, 51, 0) 100%),url(../images/form-back.png);
+  background: -o-linear-gradient(top, rgba(17, 17, 18, 0.52) 0%, rgba(51, 51, 51, 0) 100%),url(../images/form-back.png);
   background: linear-gradient(180deg, rgba(17, 17, 18, 0.52) 0%, rgba(51, 51, 51, 0) 100%),url(../images/form-back.png);
   margin-bottom: 77px;
 }
@@ -293,8 +342,12 @@ main .wrapper .catalog a .services h3:hover::after {
 }
 
 .form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-bottom: 78px;
 }
 
@@ -319,7 +372,8 @@ main .wrapper .catalog a .services h3:hover::after {
   background: rgba(255, 255, 255, 0.98);
   width: 300px;
   height: 72px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 37px;
   border: 0 none;
   font-family: Roboto;
@@ -400,14 +454,16 @@ main .wrapper .catalog a .services h3:hover::after {
   width: 316px;
   height: 78px;
   border-radius: 37px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-left: 2.92%;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   line-height: 42px;
   font-weight: 500;
-  box-shadow: 0px 1px 4px #FF5656;
+  -webkit-box-shadow: 0px 1px 4px #FF5656;
+          box-shadow: 0px 1px 4px #FF5656;
 }
 
 
@@ -423,17 +479,27 @@ main .wrapper .catalog a .services h3:hover::after {
 }
 
 .advantages .advantages-grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(-webkit-max-content, 658px) 80px minmax(-webkit-max-content, 476px);
+  -ms-grid-columns: minmax(max-content, 658px) 80px minmax(max-content, 476px);
+  grid-template-columns: minmax(-webkit-max-content, 658px) minmax(-webkit-max-content, 476px);
   grid-template-columns: minmax(max-content, 658px) minmax(max-content, 476px);
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-row-gap: 86px;
   grid-column-gap: 80px;
   margin-bottom: 71px;
 }
 
 .advantages .advantages-grid .advantages-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .advantages .advantages-grid .advantages-item .advantages-item--icon {
@@ -441,9 +507,15 @@ main .wrapper .catalog a .services h3:hover::after {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .advantages .advantages-grid .advantages-item img {
@@ -471,10 +543,18 @@ main .wrapper .catalog a .services h3:hover::after {
 }
 
 .howtoget .howtoget-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 72px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+/*.howtoget .howtoget-steps img {
+  max-width: 300px;
+}*/
 
 .howtoget .howtoget-steps .howtoget-steps--1,
 .howtoget .howtoget-steps .howtoget-steps--2,
@@ -520,6 +600,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps .howtoget-steps--1::after {
   content: "";
   background: url(../images/howtoget/corner-arrow.png);
+  background-size: 76px 68px;
   width: 76px;
   height: 68px;
   position: absolute;
@@ -530,6 +611,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps .howtoget-steps--2::before  {
   content: "";
   background: url(../images/howtoget/dots.png);
+  background-size: 29px 10px;
   width: 29px;
   height: 10px;
   position: absolute;
@@ -540,6 +622,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps .howtoget-steps--2::after {
   content: "";
   background: url(../images/howtoget/vert-arrow.png);
+  background-size: 48px 64px;
   width: 48px;
   height: 64px;
   position: absolute;
@@ -550,6 +633,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps .howtoget-steps--3::before  {
   content: "";
   background: url(../images/howtoget/dots.png);
+  background-size: 29px 10px;
   width: 29px;
   height: 10px;
   position: absolute;
@@ -560,6 +644,7 @@ main .wrapper .catalog a .services h3:hover::after {
 .howtoget .howtoget-steps .howtoget-steps--3::after {
   content: "";
   background: url(../images/howtoget/geo.png);
+  background-size: 57px 76px;
   width: 57px;
   height: 76px;
   position: absolute;
@@ -572,7 +657,8 @@ main .wrapper .catalog a .services h3:hover::after {
 .form2 {
   background: url(../images/form2-back.png);
   margin-bottom: 71px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
 .form2 h2 {
@@ -583,8 +669,12 @@ main .wrapper .catalog a .services h3:hover::after {
 }
 
 .form2 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-bottom: 78px;
 }
 
@@ -609,7 +699,8 @@ main .wrapper .catalog a .services h3:hover::after {
   background: #444247;
   width: 300px;
   height: 72px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 37px;
   border: 0 none;
   color: #fff;
@@ -695,14 +786,16 @@ main .wrapper .catalog a .services h3:hover::after {
   width: 316px;
   height: 78px;
   border-radius: 37px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-left: 2.92%;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   line-height: 42px;
   font-weight: 500;
-  box-shadow: 0px 1px 4px #FF5656;
+  -webkit-box-shadow: 0px 1px 4px #FF5656;
+          box-shadow: 0px 1px 4px #FF5656;
 }
 
 
@@ -710,15 +803,26 @@ main .wrapper .catalog a .services h3:hover::after {
 
 footer .wrapper {
   background: #444247;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top:29px;
 }
 
 footer .wrapper .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin-top: 10px;
   margin-left: 4.65%;
   margin-bottom: 30px;
@@ -726,8 +830,13 @@ footer .wrapper .col {
 }
 
 footer .wrapper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   margin-top: 10px;
   margin-left: 4.65%;
   margin-bottom: 30px;
@@ -742,11 +851,16 @@ footer .wrapper .logo .text {
   color: #fff;
   font: 300 16px/30px 'Roboto', sans-serif;
   opacity: 0.76;
+  min-width: 165px;
 }
 
 footer .wrapper .soc-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .wrapper .soc-icons li ~ li {
@@ -757,8 +871,13 @@ footer .wrapper .geo {
   color: #fff;
   font: normal 22px/22px 'Roboto', sans-serif;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   margin-right: 22.9%;
 }
 
@@ -785,8 +904,13 @@ footer .wrapper .geo span {
 }
 
 footer .wrapper .phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 footer .wrapper .phones .phone1 {
@@ -812,9 +936,13 @@ footer .wrapper .phones a::before {
 /*info style*/
 
 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: #444247;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-bottom: 19px;
 }
 
@@ -833,4 +961,3 @@ footer .wrapper .phones a::before {
 .info a.link1 {
   margin-right: 20.2%;
 }
-

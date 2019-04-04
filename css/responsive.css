@@ -1,284 +1,146 @@
-@media screen and (max-width: 1600px) {
-	/*header resp */
-
-	header .wrapper {
-		flex-wrap: nowrap;
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+	
+	.container {
+		width: 100%;
 	}
 
-	header .wrapper .logo .img-container {
-		width: 180px;
-	}
-
-	header .wrapper nav ul {
-		width: auto;
-		justify-content: flex-start;
-	}
-
-	header .wrapper .btn-phones {
-		width:auto;
-	}
-
-	header .wrapper .btn-phones .btn {
-		line-height: normal;
-		padding-top: 8px;
-		padding-bottom: 8px;
+	header .wrapper .geo {
+		font: 16px/20px 'Roboto', sans-serif;
 	}
 
 	header .wrapper .phones {
-		margin-left: 1rem;
+		margin-right: 2%;
 	}
 
-	/*footer resp */
-
-	footer .wrapper .logo .img-container {
-		max-width: 150px;
-	}
-}
-
-@media screen and (max-width: 1400px) {
-
-		header .wrapper .btn-phones {
-			flex-direction: column-reverse;
-		}
-
-		header .wrapper {
-			justify-content: space-between;
-		}
-
-		header .wrapper .btn-phones .btn {
-			margin: 5px 0;
-			padding-top: 3px;
-			padding-bottom: 3px;
-		}
-
-		header .wrapper .phones {
-			margin: 0 auto;
-		}
-}
-
-@media screen and (max-width: 999px) {
-
-		header .wrapper nav {
-			order: 2;
-			display: flex;
-			justify-content: flex-end;
-			position: relative;
-		}
-
-		header .wrapper nav ul {
-			display: none;
-			position: absolute;
-			right: 0;
-			top: 100%;
-		    height: auto;
-		    width: 480px;
-		    padding: 10px 15px;
-		    background: #fff;
-		    box-shadow: 0 8px 10px 0 rgba(0,0,0,.2);
-		    box-sizing: border-box;
-		}
-
-	/*	header .wrapper nav ul.active {
-			right: 0;
-			top: 100%;
-		    height: auto;
-		    width: 480px;
-		    padding: 10px 15px;
-		    background: #fff;
-		    box-shadow: 0 8px 10px 0 rgba(0,0,0,.2);
-		    box-sizing: border-box;
-		} */
-
-		header .wrapper nav .mobile-menu {
-			display: block;
-		}
-
-		/*footer resp */ 
-
-		footer .wrapper {
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-
-		footer .wrapper .col {
-			order:1;
-			margin-left: 130px;
-			margin-right: 130px;
-			flex-direction: row;
-			justify-content: space-between;
-			width: 100%;
-			margin-top: 30px;
-		}
-
-}
-
-@media screen and (max-width: 790px) {
-
-		header .wrapper .logo .img-container {
-			min-width: 95px;
-		}
-
-		header .wrapper .logo .text {
-			font-size: 14px;
-		}
-
-		/*footer resp */ 
-
-		footer .wrapper .col {
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-		}
-
-		footer .wrapper .col .vk {
-			margin-right: 40px;
-			margin-bottom: 0;
-
-		}
-
-		footer .wrapper .col address {
-			order:2;
-			margin-top: 10px;
-			font-size: 120%;
-			text-align: center;
-		}
-
-		footer .wrapper .logo .img-container {
-			min-width: 95px;
-		}
-
-		footer .wrapper .logo .text {
-			font-size: 14px;
-		}
-
-}
-
-
-@media screen and (max-width: 670px) {
-
-		header .wrapper .btn-phones .btn.to-map {
-			display: none;
-		}
-
-		header .wrapper .logo {
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-right: 50px;
-		}
-
-		header .wrapper .logo .img-container {
-			min-width: 95px;
-			max-width: 130px;
-
+	header .wrapper .phones a {
+		font: bold 20px 'Roboto', sans-serif;
+		white-space: nowrap;
 	}
 
-		header .wrapper .logo .text {
-			padding-top: 10px;
-			text-align: center;
-			margin-left: 0px;
-		}
-
-		header .wrapper .btn-phones .phones {
-			font-size: 120%;
-			white-space: nowrap;
-		}
-
-		header .wrapper .btn-phones .btn {
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		/*footer resp */ 
-
-		footer .wrapper { 
-			justify-content: center;
-		}
-
-
-		footer .wrapper .logo {
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-right: 50px;
-			max-width: 200px;
-		}
-
-		footer .wrapper .logo .img-container {
-			min-width: 95px;
-			max-width: 130px;
-
+	main .wrapper .catalog {
+		grid-template-columns: repeat(3, 306px);
 	}
 
-		footer .wrapper .logo .text {
-			padding-top: 10px;
-			text-align: center;
-			margin-left: 20px;
-			margin-right: 20px;
-		}
+	.masters-content {
+		margin-left: 3%;
+		margin-right: 3%;
+	}
 
-		footer .wrapper .phones {
-			font-size: 120%;
-		}
+	.form h2 {
+		text-align: center;
+	}
 
-		footer .wrapper .copyright {
-			order:3;
-			margin-top: 10px;
-		}
+	.form form {
+		flex-flow: column;
+		align-items: center;
+	}
 
+	.form form button {
+		align-self: center;
+		margin-top: 35px;
+	}
+
+	.advantages .advantages-grid {
+		grid-template-columns: minmax(max-content, 658px);
+	}
+
+	.howtoget .howtoget-steps img {
+ 		 max-width: 300px;
+	}
+
+	.howtoget .howtoget-steps .howtoget-text {
+		font-size: 18px;
+		line-height: 24px;
+		top:270px;
+  		left:25px;
+	}
+
+	.howtoget .howtoget-steps .howtoget-steps--3 .auto {
+		font-size: 18px;
+		line-height: 24px;
+		top:270px;
+  		left:75px;
+	}
+
+	.howtoget .howtoget-steps .howtoget-steps--3 .iq {
+		font-size: 60px;
+		top:234px;
+  		left:122px;
+	}
+
+	.howtoget .howtoget-steps .howtoget-steps--1::after {
+		background-size: 38px 34px;
+		width: 38px;
+		height: 34px;
+		top: 272px;
+		left: 233px;
+	}
+
+	.howtoget .howtoget-steps .howtoget-steps--2::before  {
+		background-size: 14.5px 5px;
+		width: 14.5px;
+		height: 5px;
+		left: -16px;
 }
 
-@media screen and (max-width: 530px) {
-
-
-		footer .wrapper .col {
-			width: auto;
-		}
-
-		footer .wrapper .col .vk {
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-
-		footer .wrapper .col .btn.to-map {
-			font-size: 20px;
-			line-height: 1.5em;
-			padding: 10px 15px;
-		}
-
-		footer .wrapper .phones {
-			font-size: 170%;
-			margin-top: 15px;
-		}
-
-		footer .wrapper .logo {
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-
+	.howtoget .howtoget-steps .howtoget-steps--2::after {
+	 	background-size: 24px 32px;
+	  	width: 24px;
+		height: 32px;
+	  	top: 275px;
+	  	left: 235px;
 }
 
-
-
-@media screen and (max-width: 450px) { 
-
-		header .wrapper {
-			flex-wrap: wrap;
-		}
-
-		header .wrapper .btn-phones {
-			order:3;
-			margin-top: 20px;
-			flex-direction: row-reverse;
-			justify-content: space-between;
-			width: 100%;
-		}
-
+	.howtoget .howtoget-steps .howtoget-steps--3::before  {
+		background-size: 14.5px 5px;
+		width: 14.5px;
+		height: 5px;
+		left: -16px;
 }
 
-@media screen and (max-width: 380px) { 
+	.howtoget .howtoget-steps .howtoget-steps--3::after {
+	  	background-size: 28px 38px;
+	  	width: 28px;
+	  	height: 38px;
+	  	top: 221px;
+	  	left: 74px;
+}
 
-		header .wrapper .btn-phones {
-			flex-direction: column-reverse;
-		}
+	.form2 h2 {
+		text-align: center;
+	}
 
+	.form2 form {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.form2 form button {
+		align-self: center;
+		margin-top: 35px;
+	}
+
+	footer .wrapper .geo {
+		font: 16px/20px 'Roboto', sans-serif;
+	}
+
+	footer .wrapper .phones {
+		margin-right: 2%;
+	}
+
+	footer .wrapper .phones a {
+		font: bold 20px 'Roboto', sans-serif;
+		white-space: nowrap;
+	}
+
+	.info .copyright {
+		font: normal 14px/20px 'Roboto', sans-serif;
+	}
+
+	.info a {
+	  	color: #fff;
+	  	font: normal 14px/20px 'Roboto', sans-serif;
+}
+	
 
 }

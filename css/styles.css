@@ -1,0 +1,334 @@
+body,html {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*Fonts*/
+
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7EyjmmZ8WDm7Q.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7F6iGmZ8WDm7Q.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7Eyjmmd8WA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7F6iGmd8WA.woff2) format('woff2');
+}
+
+.container  {
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto;
+	box-sizing: border-box;
+}
+
+/*menu style*/
+
+/*header {
+	background: url(../images/headerback.jpg);
+	z-index: 999;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}*/
+
+/*header nav {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	z-index: 1000;
+}*/
+
+header nav ul {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	width: 100%;
+	background: url(../images/headerback.jpg);
+}
+
+header nav ul li {
+	margin-right: 62px;
+}
+
+header nav ul li a {
+	color: #fff;
+	font-family: "Rubik";
+	font-size: 24px;
+	white-space: nowrap;
+}
+
+header nav ul li a:hover {
+	color: #1375f8;
+}
+
+main .first {
+	background: url(../images/mainback.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	justify-content: flex-end;
+}
+
+main .first h1 {
+	color: #fff;
+	font-family: "Rubik";
+	font-size: 60px;
+	text-align: center;
+	font-weight: 400;
+	margin: 0 auto 70px;
+	position: relative;
+}
+
+main .first h1::after {
+	content: "";
+	width: 260px;
+	height: 2px;
+	background: #dedede;
+	background-size: 320px 2px;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -130px;
+}
+
+main .first .icons {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+main .first .icons .icons-item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+main .first .icons .icons-item .icons-item-img {
+	background: #4a4a4a;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+}
+
+main .first .icons .icons-item .icons-item-img img {
+	display: block;
+	width: 50px;
+}
+
+main .first .icons .icons-item:nth-child(2) .icons-item-img img {
+	width: 60px;
+}
+
+main .first .icons .icons-item .icons-item-text {
+	color: #fff;
+	font-family: "Rubik";
+	font-size: 22px;
+	text-align: center;
+	font-weight: 400;
+	max-width: 170px;
+	margin-top: 30px;
+}
+
+
+/*Footer style*/
+
+footer {
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	background: #fafafa;
+}
+
+footer h2 {
+	color: #4a4a4a;
+	font-family: "Rubik";
+	font-size: 48px;
+	text-align: center;
+	font-weight: 400;
+	margin: 96px auto 0;
+	position: relative;
+}
+
+footer h2::after {
+	content: "";
+	width: 260px;
+	height: 2px;
+	background: #4a4a4a;
+	background-size: 260px 2px;
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	margin-left: -130px;
+}
+
+footer .f-content {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+footer .contacts a {
+	color: #4a4a4a;
+	font-family: "Rubik";
+	font-size: 36px;
+	text-align: center;
+	font-weight: 400;
+}
+
+footer .contacts a:hover {
+	color: #1375f8;
+}
+
+footer .contacts .phone {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+footer .contacts .phone::before {
+	content: "";
+	background: url(../images/icons/svg/call-answer.svg);
+	background-size: 36px 36px;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 5px;
+	left: -55px;
+}
+
+footer .contacts .email {
+	position: relative;
+}
+
+footer .contacts .email::before {
+	content: "";
+	background: url(../images/icons/svg/mail.svg);
+	background-size: 36px 36px;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 5px;
+	left: -55px;
+}
+
+footer .social {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .social .social-text {
+	color: #4a4a4a;
+	font-family: "Rubik";
+	font-size: 36px;
+	text-align: center;
+	font-weight: 400;
+}
+
+footer .social .social-icons {
+	margin-top: 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .social .social-icons img {
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+

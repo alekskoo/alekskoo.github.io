@@ -12,8 +12,8 @@
   	<meta name="keywords" content="Digital-маркетинг под ключ">
 
   	<link rel="stylesheet" href="css/normalize.css">
-  	<link rel="stylesheet" href="css/slick.css">
-  	<link rel="stylesheet" href="css/slick-theme.css">
+  	<link rel="stylesheet" href="slick/slick.css">
+  	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="stylesheet" href="css/styles.css">
 
@@ -246,6 +246,22 @@
 								</div>
 								<div class="third-content-text-cert">
 									<p>Мои сертификаты</p>
+									<div class="sl">
+										<div class="sl--slide">
+											<img src="images/certificates/1.jpg" alt="Сертификат 1" class="sl--img" title="Сертификат 1">
+										</div>
+										<div class="sl--slide">
+											<img src="images/certificates/2.jpg" alt="Сертификат 2" class="sl--img" title="Сертификат 2">
+										</div>
+										<div class="sl--slide">
+											<img src="images/certificates/3.jpg" alt="Сертификат 3" class="sl--img" title="Сертификат 3">
+										</div>
+										<div class="sl--slide">
+											<img src="images/certificates/4.jpg" alt="Сертификат 4" class="sl--img" title="Сертификат 4">
+										</div>
+									</div>
+
+
 									<!-- <div class="responsive">
 										<div>
 											<div class="slider-item1"></div>
@@ -312,7 +328,7 @@
 									<div class="price item1">от 6 900 Р</div>
 									<div class="month">в месяц</div>
 								</div>
-								<a href="#" class="button">Подробнее</a>
+								<a href="#popup" class="popup-with-zoom-anim">Подробнее</a>
 							</div>
 							<div class="fifth-wrapper-item">
 								<h3>Пакет Business</h3>
@@ -320,7 +336,7 @@
 									<div class="price item2">от 9 900 Р</div>
 									<div class="month">в месяц</div>
 								</div>
-								<a href="#" class="button">Подробнее</a>
+								<a href="#popup" class="popup-with-zoom-anim">Подробнее</a>
 							</div>
 							<div class="fifth-wrapper-item">
 								<h3>Пакет Pro</h3>
@@ -328,9 +344,21 @@
 									<div class="price item3">от 15 900 Р</div>
 									<div class="month">в месяц</div>
 								</div>
-								<a href="#" class="details">Подробнее</a>
+								<a href="#popup" class="popup-with-zoom-anim">Подробнее</a>
 							</div>
 						</div>
+					</div>
+					<div id="popup" class="zoom-anim-dialog mfp-hide">
+						<h3>Пакет Start</h3>
+						<p>В рамках этого пакета я выполню следующие работы:</p>
+						<ul>
+							<li>Создание и настройка бизнес-сообществ в 4 социальнах сетях: VK, Instagram, Facebook, Одноклассники</li>
+							<li>Оформление сообществ в едином стиле</li>
+							<li>Составление контент-плана</li>
+							<li>Написание ТЗ для копирайтера</li>
+							<li>Тестовая рекламная кампания в 1 соцсети</li>
+						</ul>
+						<a href="https://vk.me/lexalexalexa" target="_blank" class="order">Заказать пакет</a>
 					</div>
 				</section>
 			</main>
@@ -364,7 +392,7 @@
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/popup.js"></script>
-	<script src="js/slick.min.js"></script>
+	<script src="slick/slick.min.js"></script>
 	<script src="js/libs.js"></script>
 </body>
 </html>

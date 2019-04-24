@@ -76,6 +76,7 @@
 		  ]
 		});
 
+
 	  $('.sl2').slick({
 		  dots: true,
 		  infinite: true,
@@ -166,6 +167,12 @@
 		midClick: true,
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
-	});	
+	});
+});
+
+
+	//counter initialization
+	$(document).ready(function() {
+	$('.counter').counterUp();
 });
 		

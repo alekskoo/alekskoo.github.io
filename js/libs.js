@@ -1,3 +1,5 @@
+ jQuery(document).ready(function(){
+
  // tabbed content
     // http://www.entheosweb.com/tutorials/css/tabs.asp
     $(".tab_content").hide();
@@ -39,8 +41,7 @@
 
     
     //slick initialization
-    jQuery(document).ready(function(){
-	  $('.sl').slick({
+    $('.sl').slick({
 		  dots: true,
 		  infinite: true,
 		  speed: 300,
@@ -48,26 +49,37 @@
 		  slidesToScroll: 1,
 		  responsive: [
 		    {
-		      breakpoint: 1024,
+		      breakpoint: 1790,
 		      settings: {
-		        slidesToShow: 2,
+		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        infinite: true,
 		        dots: true
 		      }
 		    },
 		    {
+		      breakpoint: 1291,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        infinite: true,
+		        dots: false
+		      }
+		    },
+		    {
 		      breakpoint: 600,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1
+		        slidesToScroll: 1,
+		        dots: false
 		      }
 		    },
 		    {
 		      breakpoint: 480,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1
+		        slidesToScroll: 1,
+		        dots: false
 		      }
 		    }
 		    // You can unslick at a given breakpoint now by adding:
@@ -85,9 +97,9 @@
 		  slidesToScroll: 1,
 		  responsive: [
 		    {
-		      breakpoint: 1024,
+		      breakpoint: 1640,
 		      settings: {
-		        slidesToShow: 2,
+		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        infinite: true,
 		        dots: true
@@ -121,9 +133,9 @@
 		  slidesToScroll: 1,
 		  responsive: [
 		    {
-		      breakpoint: 1024,
+		      breakpoint: 1081,
 		      settings: {
-		        slidesToShow: 2,
+		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        infinite: true,
 		        dots: true
@@ -148,11 +160,10 @@
 		    // instead of a settings object
 		  ]
 		});
-	});
+	
 
 
 	//popup initialization
-	$(document).ready(function() {
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
 
@@ -183,14 +194,24 @@
 			duration: 300 // don't foget to change the duration also in CSS
 		}
 	});
+
+	//anchor links
+	$('nav ul li a').on('click', function (event) {
+		event.preventDefault();
+		var id = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body, html').animate({ scrollTop: top - 100}, 500);
+	});
+
+	//mobile menu
+	if($('.mobile-menu').length > 0){
+        $('body').on('click', '.mobile-menu', function(){
+			$('header nav ul').slideToggle();
+			// $('header nav ul').toggleClass('active');
+		})
+    }
+
 });
 
 
-	//counter initialization
-	$(document).ready(function() {
-	$('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-});
-		
+

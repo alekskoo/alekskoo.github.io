@@ -16,20 +16,21 @@
   	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"> <!-- в формате ico -->
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon.ico">
 
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="Digital-маркетинг под ключ">
 	<meta property="og:title" content="Digital-маркетинг под ключ">
 	<meta property="og:description" content="Digital-маркетинг под ключ">
-	<meta property="og:image" content=""> <!-- абсолютная ссылка -->
+	<meta property="og:image" content="https://alekskoo.github.io/images/og_image.jpg">
 	<meta property="og:image:width" content="600">
 	<meta property="og:image:height" content="600">
 
 	<!-- покрасить моб браузер в цвет сайта -->
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="theme-color" content="#29262a"> 
+	<meta name="theme-color" content="#1375f8"> 
 
 </head>
 <body>
@@ -39,12 +40,16 @@
 			<header>
 				<nav>
 					<ul>
-						<li><a href="#">Что я умею</a></li>
-						<li><a href="#">Мой опыт</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Цены</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#second">Что я умею</a></li>
+						<li><a href="#third">Мой опыт</a></li>
+						<li><a href="#fourth">Отзывы</a></li>
+						<li><a href="#fifth">Цены</a></li>
+						<li><a href="#footer">Контакты</a></li>
 					</ul>
+
+					<div class="mobile-menu">
+              			<img src="images/burger-white.png" alt="burger" title="burger">
+           			</div>
 				</nav>
 			</header>
 			<main>
@@ -86,7 +91,7 @@
 					</div>
 				</section>
 
-				<section class="second">
+				<section id="second" class="second">
 					<h2>Что я делаю для вашего бизнеса?</h2>
 					<div class="second-wrapper">
 						<div class="ul-container">
@@ -155,9 +160,9 @@
 							</ul>
 						</div>
 						<div class="tab_container">
-						    <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
+						    <h3 class="d_active tab_drawer_heading" rel="tab1">Сайт</h3>
 						    <div id="tab1" class="tab_content">
-							    <h2>Tab 1 content</h2>
+							    <h2>Сайт</h2>
 							    <div class="tab_content_inner">
 								    <p>Сайт нужен не каждому бизнесу, но он позволяет аккумулировать весь трафик на одной площадке и более эффективно с ним работать.</p>
 								    <p class="tab_content_ol_heading">Из каких этапов состоит создание сайта?</p>
@@ -167,56 +172,161 @@
 								    	<li>Рисую дизайн и верстаю</li>
 								    	<li>Регистрирую домен и хостинг</li>
 								    	<li>Запускаем готовый проект</li>
-								    </ul>
+								    </ol>
 							    </div>
 						    </div>
 						    <!-- #tab1 -->
-						  <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
-						  <div id="tab2" class="tab_content">
-						  <h2>Tab 2 content</h2>
-						    <p>Nunc dui velit, scelerisque eu placerat volutpat, dapibus eu nisi. Vivamus eleifend vestibulum odio non vulputate.</p>
-						  </div>
-						  <!-- #tab2 -->
-						  <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
-						  <div id="tab3" class="tab_content">
-						  <h2>Tab 3 content</h2>
-						    <p>Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
-						  </div>
-						  <!-- #tab3 -->
-						  <h3 class="tab_drawer_heading" rel="tab4">Tab 4</h3>
-						  <div id="tab4" class="tab_content">
-						  <h2>Tab 4 content</h2>
-						    <p>Integer ultrices lacus sit amet lorem viverra consequat. Vivamus lacinia interdum sapien non faucibus. Maecenas bibendum, lectus at ultrices viverra, elit magna egestas magna, a adipiscing mauris justo nec eros.</p>
-						  </div>
-						  <!-- #tab4 --> 
-						  <h3 class="tab_drawer_heading" rel="tab4">Tab 4</h3>
-						  <div id="tab6" class="tab_content">
-						  <h2>Tab 6 content</h2>
-						    <p>Integer ultrices lacus sit amet lorem viverra consequat. Vivamus lacinia interdum sapien non faucibus. Maecenas bibendum, lectus at ultrices viverra, elit magna egestas magna, a adipiscing mauris justo nec eros.</p>
-						  </div>
-						  <!-- #tab6 -->
+						  	<h3 class="tab_drawer_heading" rel="tab2">Сообщества</h3>
+						  	<div id="tab2" class="tab_content">
+							    <h2>Сообщества</h2>
+							    <div class="tab_content_inner">
+								    <p>Сообщества в социальных сетях позволяют потенциальным клиентам легче коммуницировать с вашей компанией. Они видят, что вы открыты к общению, быстро решаете проблемы и нивелируете возражения</p>
+								    <p class="tab_content_ol_heading">Что входит в пакет услуг по соцсетям?</p>
+								    <ol class="tab_content_ol">
+								    	<li>Создание сообществ в выбранных соцсетях</li>
+								    	<li>Оформление совместно с дизайнером</li>
+								    	<li>Техническая настройка</li>
+								    	<li>Первичное наполнение контентом</li>
+								    	<li>Составление контент-плана</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab2 -->
+						  	<h3 class="tab_drawer_heading" rel="tab3">Мессенджеры</h3>
+						   	<div id="tab3" class="tab_content">
+							    <h2>Мессенджеры</h2>
+							    <div class="tab_content_inner">
+								    <p>Коммуникация с брендом или компанией должна быть для пользователя максимально удобной и быстрой. Поэтому важно быть всегда онлайн в той среде, в которой привыкли общаться люди в 21 веке - в мессенджерах. </p>
+								    <p class="tab_content_ol_heading">В пакет услуг по мессенджерам входит</p>
+								    <ol class="tab_content_ol">
+								    	<li>Регистрация аккаунтов</li>
+								    	<li>Помощь с настройкой клиентов для операторов</li>
+								    	<li>Поиск решений для коммуникации в режиме одного окна</li>
+								    	<li>Подключение рассыльщиков</li>
+								    	<li>Тестовая рассылка по базе</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab3 -->
+						  	<h3 class="tab_drawer_heading" rel="tab4">Контекстная реклама</h3>
+						  	<div id="tab4" class="tab_content">
+							    <h2>Контекстная реклама</h2>
+							    <div class="tab_content_inner">
+								    <p>Проще всего сделать своими клиентами тех, кто уже ищет те товары и услуги, которые вы предлагаете. Помогу этим людям найти именно вас с помощью контекстной и поисковой рекламы в Яндекс и Google</p>
+								    <p class="tab_content_ol_heading">В минимальный пакет услуг входит</p>
+								    <ol class="tab_content_ol">
+								    	<li>Регистрация рекламных аккаунтов</li>
+								    	<li>Сбор и согласование ключевых слов</li>
+								    	<li>Создание тестовой рекламной кампании</li>
+								    	<li>Аналитика результатов и оптимизация кампании</li>
+								    	<li>Масштабирование положительного результата</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab4 --> 
+						  	<h3 class="tab_drawer_heading" rel="tab5">Таргетированная реклама</h3>
+						  	<div id="tab5" class="tab_content">
+							    <h2>Таргетированная реклама</h2>
+							    <div class="tab_content_inner">
+								    <p>Сейчас в социальных сетях можно найти практически любой товар или услугу. Не отставайте от своих конкурентов - будьте там, где есть ваши клиенты. Помогу вам найти целевую аудиторию среди миллионов пользователей соцсетей и привести их к вам</p>
+								    <p class="tab_content_ol_heading">В минимальный пакет услуг входит</p>
+								    <ol class="tab_content_ol">
+								    	<li>Регистрация рекламных аккаунтов</li>
+								    	<li>Составление майнд-карты с аудиториями и триггерами</li>
+								    	<li>Создание тестовой рекламной кампании</li>
+								    	<li>Аналитика результатов и оптимизация кампании</li>
+								    	<li>Масштабирование положительного результата</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab5 -->
+						  	<h3 class="tab_drawer_heading" rel="tab6">Веб-аналитика</h3>
+						  	<div id="tab6" class="tab_content">
+							    <h2>Веб-аналитика</h2>
+							    <div class="tab_content_inner">
+								    <p>Если на вашем сайте есть трафик, то для дальнейшего роста нужно детально изучить тех, кто уже к вам пришел. Тогда можно будет лучше понять, кто ваш клиент, откуда их лучше и дешевле приводить на ваш ресурс</p>
+								    <p class="tab_content_ol_heading">Что именно я могу сделать по веб-аналитике?</p>
+								    <ol class="tab_content_ol">
+								    	<li>Создание и интеграция счетчиков</li>
+								    	<li>Базовая настройка отчетов</li>
+								    	<li>Мониторинг результатов по рекламным кампаниям</li>
+								    	<li>Предоставление отчетов по итогам периода</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab6 -->
+						  	<h3 class="tab_drawer_heading" rel="tab7">Трафик по воронке</h3>
+						  	<div id="tab7" class="tab_content">
+							    <h2>Трафик по воронке</h2>
+							    <div class="tab_content_inner">
+								    <p>Привести людей на свою площадку важно. Но что делать с ними дальше? Смысл правильной кампании в том, что человек выполняет определенную последовательность действий, в результате которой переходит из состояние потеницального клиента в лояльного и постоянного</p>
+								    <p class="tab_content_ol_heading">Что там по воронке?</p>
+								    <ol class="tab_content_ol">
+								    	<li>Проектирую несколько вариантов воронки</li>
+								    	<li>Тестирую их на входящем трафике</li>
+								    	<li>Анализирую вместе с вами результаты</li>
+								    	<li>Повышаем конверсию в каждой точке воронки</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab7 -->
+						  	<h3 class="tab_drawer_heading" rel="tab8">Точки контакта</h3>
+						  	<div id="tab8" class="tab_content">
+							    <h2>Точки контакта</h2>
+							    <div class="tab_content_inner">
+								    <p>Вот мы настроили воронку, но конверсия так себе? Такое бывает очень часто. Но это не повод для отчаяния и смены специалиста. Необходимо выявить слабые точки контакта с людьми в воронке, переделать их и заново оценивать результаты</p>
+								    <p class="tab_content_ol_heading">Например, я могу</p>
+								    <ol class="tab_content_ol">
+								    	<li>Протестировать разные цепочки рассылок</li>
+								    	<li>Экспериментировать с разными триггерами</li>
+								    	<li>Использовать разные методики дожима до покупки</li>
+								    	<li>Стимулировать людей давать прямую обратную связь</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab8 -->
+						  	<h3 class="tab_drawer_heading" rel="tab9">Ретаргетинг</h3>
+						  	<div id="tab9" class="tab_content">
+							    <h2>Ретаргетинг</h2>
+							    <div class="tab_content_inner">
+								    <p>Расставаться всегда грустно. Особенно, когда это ваш потенциальный клиент. Но, как известно, вернуть старого гораздо дешевле и эффективнее, чем привлечь нового.</p>
+								    <p class="tab_content_ol_heading">Поэтому мы будем делать ретаргетинг везде, где это возможно</p>
+								    <ol class="tab_content_ol">
+								    	<li>В социальных сетях</li>
+								    	<li>На тематических площадках</li>
+								    	<li>В e-mail рассылках</li>
+								    	<li>Везде, где доступна реклама</li>
+								    </ol>
+							    </div>
+						    </div>
+						  	<!-- #tab9 -->
 						  	
 							<p class="slider_heading">Мои компетенции</p>
 							<!-- slick slider start -->
 							<div class="sl">
 								<div class="sl--slide">
-									<a href="images/certificates/001.jpg" class="image-popup-no-margins">
-										<img src="images/certificates/001.jpg" alt="Сертификат 1" title="Сертификат 1">
+									<a href="images/certificates/Email-Coding-Full.jpg" class="image-popup-no-margins">
+										<img src="images/certificates/mini/Email Coding.jpg" alt="Email Coding" title="Email Coding">
 									</a>
 								</div>
 								<div class="sl--slide">
-									<a href="images/certificates/002.jpg" class="image-popup-no-margins">
-										<img src="images/certificates/002.jpg" alt="Сертификат 2" title="Сертификат 2">
+									<a href="images/certificates/Email-Analytics-Full.jpg" class="image-popup-no-margins">
+										<img src="images/certificates/mini/Email Analytics.jpg" alt="Email Analytics" title="Email Analytics">
 									</a>
 								</div>
 								<div class="sl--slide">
-									<a href="images/certificates/003.jpg" class="image-popup-no-margins">
-										<img src="images/certificates/003.jpg" alt="Сертификат 3" title="Сертификат 3">
+									<a href="images/certificates/googleads-full.jpg" class="image-popup-no-margins">
+										<img src="images/certificates/mini/googleads.jpg" alt="Google Ads" title="Google Ads">
 									</a>
 								</div>
 								<div class="sl--slide">
-									<a href="images/certificates/004.jpg" class="image-popup-no-margins">
-										<img src="images/certificates/004.jpg" alt="Сертификат 4" title="Сертификат 4">
+									<a href="images/certificates/googlesearchads-full.jpg" class="image-popup-no-margins">
+										<img src="images/certificates/mini/googlesearchads.jpg" alt="Google Search Ads" title="Google Search Ads">
+									</a>
+								</div>
+								<div class="sl--slide">
+									<a href="images/certificates/googleanalyticsfull.jpg" class="image-popup-no-margins">
+										<img src="images/certificates/mini/googleanalytics.jpg" alt="Google Analytics" title="Google Analytics">
 									</a>
 								</div>
 							</div>
@@ -227,7 +337,7 @@
 					</div>
 				</section>
 
-				<section class="third">
+				<section id="third" class="third">
 					<div class="third-wrapper">
 						<h2>Мой опыт и компетенции</h2>
 						<div class="third-content">
@@ -254,30 +364,33 @@
 								</div>
 								<div class="third-content-text-cert">
 									<p>Мои сертификаты</p>
-									<!-- slick slider start -->
 									<div class="sl2">
 										<div class="sl2--slide">
-											<a href="images/certificates/001.jpg" class="image-popup-no-margins">
-												<img src="images/certificates/001.jpg" alt="Сертификат 1" class="sl--img" title="Сертификат 1">
+											<a href="images/certificates/Email-Coding-Full.jpg" class="image-popup-no-margins">
+												<img src="images/certificates/mini/Email Coding.jpg" alt="Email Coding" title="Email Coding">
 											</a>
 										</div>
 										<div class="sl2--slide">
-											<a href="images/certificates/002.jpg" class="image-popup-no-margins">
-												<img src="images/certificates/002.jpg" alt="Сертификат 2" class="sl--img" title="Сертификат 2">
+											<a href="images/certificates/Email-Analytics-Full.jpg" class="image-popup-no-margins">
+												<img src="images/certificates/mini/Email Analytics.jpg" alt="Email Analytics" title="Email Analytics">
 											</a>
 										</div>
 										<div class="sl2--slide">
-											<a href="images/certificates/003.jpg" class="image-popup-no-margins">
-												<img src="images/certificates/003.jpg" alt="Сертификат 3" class="sl--img" title="Сертификат 3">
+											<a href="images/certificates/googleads-full.jpg" class="image-popup-no-margins">
+												<img src="images/certificates/mini/googleads.jpg" alt="Google Ads" title="Google Ads">
 											</a>
 										</div>
 										<div class="sl2--slide">
-											<a href="images/certificates/004.jpg" class="image-popup-no-margins">
-												<img src="images/certificates/004.jpg" alt="Сертификат 4" class="sl--img" title="Сертификат 4">
+											<a href="images/certificates/googlesearchads-full.jpg" class="image-popup-no-margins">
+												<img src="images/certificates/mini/googlesearchads.jpg" alt="Google Search Ads" title="Google Search Ads">
+											</a>
+										</div>
+										<div class="sl2--slide">
+											<a href="images/certificates/googleanalyticsfull.jpg" class="image-popup-no-margins">
+												<img src="images/certificates/mini/googleanalytics.jpg" alt="Google Analytics" title="Google Analytics">
 											</a>
 										</div>
 									</div>
-									<!-- slick slider end -->
 								</div>
 							</div>	
 						</div>
@@ -285,7 +398,7 @@
 					</div>
 				</section>
 
-				<section class="fourth">
+				<section id="fourth" class="fourth">
 					<div class="fourth-wrapper">
 						<div class="clients">
 							<h2>Я работал с ...</h2>
@@ -304,37 +417,57 @@
 								<div class="sl3--slide">
 									<div class="slide-content">
 										<div class="author">
-											<img src="images/reviews/ava1.png">
+											<img src="images/reviews/ava1.png" alt="Максим Бычков" title="Максим Бычков">
 											<div class="name">
 												<p>Максим Бычков</p>
-												<a href="#" class="name-link" target="_blank">vk.com</a>
+												<a href="https://vk.com/maksik3232" class="name-link" target="_blank">vk.com/maksik3232</a>
 											</div>
 										</div>
 										<div class="text">
-											<p>Алексей уже более года занимается продвижением
-бренда Nordman в Смоленске. Благодаря его усилиям
-мы открыли уже второй магазин - оборот растет с каждым сезоном.<br/><br/>
-
-Рекомендую его как профессионала в области интернет-рекламы.</p>
+											<p>Алексей уже более года занимается продвижением бренда Nordman в Смоленске. Благодаря его усилиям мы открыли уже второй магазин - оборот растет с каждым сезоном.<br/><br/>Рекомендую его как профессионала в области интернет-рекламы.</p>
 										</div>
 									</div>
 								</div>
 								<div class="sl3--slide">
 									<div class="slide-content">
-										<div class="name"></div>
-										<div class="text"></div>
+										<div class="author">
+											<img src="images/reviews/oksana.png" alt="Оксана Козлова" title="Оксана Козлова">
+											<div class="name">
+												<p>Оксана Козлова</p>
+												<a href="https://vk.com/oksana4007" class="name-link" target="_blank">vk.com/oksana4007</a>
+											</div>
+										</div>
+										<div class="text">
+											<p>Алексей помогал развивать группу для изучающих английский язык. Приятно работать на всех этапах - от разработки оформления и стратегии до закрытия кампании. Все четко, по делу, в срок и с учетом оперативной ситуации.</p>
+										</div>
 									</div>
 								</div>
 								<div class="sl3--slide">
 									<div class="slide-content">
-										<div class="name"></div>
-										<div class="text"></div>
+										<div class="author">
+											<img src="images/reviews/nastya.png" alt="Анастасия Анущенко" title="Анастасия Анущенко">
+											<div class="name">
+												<p>Анастасия Анущенко</p>
+												<a href="https://vk.com/id16558178" class="name-link" target="_blank">vk.com/id16558178</a>
+											</div>
+										</div>
+										<div class="text">
+											<p>Алексей помог мне в продвижении моего первого интернет-магазина сибирской косметики. Для меня, мамочки в декрете, конечно, осталось в секрете, что именно он сделал, я совсем ничего в этом не понимаю! Но факт - это работает, первые продажи пошли! <br/><br/>Я счастлива! Огромное спасибо!</p>
+										</div>
 									</div>
 								</div>
 								<div class="sl3--slide">
 									<div class="slide-content">
-										<div class="name"></div>
-										<div class="text"></div>
+										<div class="author">
+											<img src="images/reviews/mikhail.png" alt="Михаил Никитин" title="Михаил Никитин">
+											<div class="name">
+												<p>Михаил Никитин</p>
+												<a href="https://vk.com/nmv713" class="name-link" target="_blank">vk.com/nmv713</a>
+											</div>
+										</div>
+										<div class="text">
+											<p>Понравился основательный подход к проработке рекламных кампаний - и результат не заставил себя ждать. Мы начали получать заявки на туры из ВКонтакте, хотя раньше работали только со своей постоянной базой клиентов <br/><br/>С тобой было приятно работать. Спасибо</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -343,7 +476,7 @@
 					</div>
 				</section>
 
-				<section class="fifth">
+				<section id="fifth" class="fifth">
 					<div class="fifth-wrapper">
 						<h2>Сколько стоят мои услуги?</h2>
 						<div class="fifth-wrapper-content">
@@ -361,7 +494,7 @@
 									<div class="price item2">от 9 900 Р</div>
 									<div class="month">в месяц</div>
 								</div>
-								<a href="#popup" class="popup-with-zoom-anim">Подробнее</a>
+								<a href="#popup2" class="popup-with-zoom-anim">Подробнее</a>
 							</div>
 							<div class="fifth-wrapper-item">
 								<h3>Пакет Pro</h3>
@@ -369,7 +502,7 @@
 									<div class="price item3">от 15 900 Р</div>
 									<div class="month">в месяц</div>
 								</div>
-								<a href="#popup" class="popup-with-zoom-anim">Подробнее</a>
+								<a href="#popup3" class="popup-with-zoom-anim">Подробнее</a>
 							</div>
 						</div>
 					</div>
@@ -385,11 +518,36 @@
 						</ul>
 						<a href="https://vk.me/lexalexalexa" target="_blank" class="order">Заказать пакет</a>
 					</div>
+					<div id="popup2" class="zoom-anim-dialog mfp-hide">
+						<h3>Пакет Business</h3>
+						<p>В рамках этого пакета я выполню следующие работы:</p>
+						<ul>
+							<li>Создание и настройка бизнес-сообществ в 4 социальнах сетях: VK, Instagram, Facebook, Одноклассники</li>
+							<li>Оформление сообществ в едином стиле</li>
+							<li>Составление контент-плана</li>
+							<li>Написание ТЗ для копирайтера</li>
+							<li>Создание лендинга для 1 товара/услуги</li>
+							<li>Настройка тестовых кампаний в поиске Яндекса, Google, ВКонтакте</li>
+							<li>Подключение веб-аналитики</li>
+						</ul>
+						<a href="https://vk.me/lexalexalexa" target="_blank" class="order">Заказать пакет</a>
+					</div>
+					<div id="popup3" class="zoom-anim-dialog mfp-hide">
+						<h3>Пакет Pro</h3>
+						<p>В рамках этого пакета я</p>
+						<ul>
+							<li>Выполню <b>все услуги</b>, которые я только могу сделать (см. выше)</li>
+							<li>Доступен для вас 24 часа в сутки</li>
+							<li>Совместно думаем над стратегическими вопросами бизнеса и продуктами</li>
+							<li>Ищу для вас подрядчиков на все работы по маркетингу</li>
+						</ul>
+						<a href="https://vk.me/lexalexalexa" target="_blank" class="order">Заказать пакет</a>
+					</div>
 				</section>
 			</main>
 		</div>
 
-		<footer>
+		<footer id="footer">
 			<h2>Как со мной связаться?</h2>
 			<div class="f-content">
 				<div class="contacts">
@@ -403,10 +561,18 @@
 				<div class="social">
 					<div class="social-text">Всегда онлайн</div>
 					<div class="social-icons">
-						<a href=""><img src="images/icons/svg/social/vk.svg" alt="vk"></a>
-						<a href=""><img src="images/icons/svg/social/whatsapp.svg" alt="whatsapp"></a>
-						<a href=""><img src="images/icons/svg/social/telegram.svg" alt="telegram"></a>
-						<a href=""><img src="images/icons/svg/social/skype.svg" alt="skype"></a>
+						<a href="https://vk.com/lexalexalexa" target="_blank">
+							<img src="images/icons/svg/social/vk.svg" alt="vk" title="vk">
+						</a>
+						<a href="https://wa.me/79532303967" target="_blank">
+							<img src="images/icons/svg/social/whatsapp.svg" alt="whatsapp" title="whatsapp">
+						</a>
+						<a href="https://t.me/aleks_koo" target="_blank">
+							<img src="images/icons/svg/social/telegram.svg" alt="telegram" title="telegram">
+						</a>
+						<a href="skype:a.c.kucherenko" target="_blank">
+							<img src="images/icons/svg/social/skype.svg" alt="skype" title="skype">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -418,8 +584,6 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/popup.js"></script>
 	<script src="slick/slick.min.js"></script>
-	<script src="js/waypoints.min.js"></script>
-	<script src="js/jquery.counterup.min.js"></script>
 	<script src="js/libs.js"></script>
 </body>
 </html>

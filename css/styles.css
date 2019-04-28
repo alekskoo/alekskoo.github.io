@@ -1,5 +1,21 @@
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
 body,html {
 	height: 100%;
+	font-family: "Rubik", sans-serif;
 }
 
 a {
@@ -15,21 +31,21 @@ h1,h2,h3 {
 
 /* cyrillic */
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7EyjmmZ8WDm7Q.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7F6iGmZ8WDm7Q.woff2) format('woff2');
@@ -37,21 +53,21 @@ h1,h2,h3 {
 
 /* latin */
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7Eyjmmd8WA.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v8/iJWHBXyIfDnIV7F6iGmd8WA.woff2) format('woff2');
@@ -60,29 +76,39 @@ h1,h2,h3 {
 .container  {
 	width: 100%;
 	height: 100%;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .content {
-	flex: 1 0 auto;
-	box-sizing: border-box;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /*menu style*/
 
 header nav ul {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	list-style-type: none;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	padding-top: 50px;
 	padding-bottom: 30px;
 	position: fixed;
@@ -90,9 +116,10 @@ header nav ul {
 	right: 0;
 	z-index: 1000;
 	width: 100%;
-	/*background: url(../images/headerback.jpg);*/
-	background: -moz-linear-gradient(left, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.8) 50%, rgba(17,17,17,0.5) 100%); /* FF3.6-15 */
+	/*background: url(../images/headerback.jpg);*/ /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, rgba(17,17,17,0.5) 0%,rgba(17,17,17,0.8) 50%,rgba(17,17,17,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -webkit-gradient(linear, left top, right top, from(rgba(17,17,17,0.5)),color-stop(50%, rgba(17,17,17,0.8)),to(rgba(17,17,17,0.5)));
+	background: -o-linear-gradient(left, rgba(17,17,17,0.5) 0%,rgba(17,17,17,0.8) 50%,rgba(17,17,17,0.5) 100%);
 	background: linear-gradient(to right, rgba(17,17,17,0.5) 0%,rgba(17,17,17,0.8) 50%,rgba(17,17,17,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80111111', endColorstr='#80111111',GradientType=1 ); /* IE6-9 */
 	}
@@ -103,7 +130,7 @@ header nav ul li {
 
 header nav ul li a {
 	color: #fff;
-	font-family: "Rubik";
+/*	font-family: "Rubik";*/
 	font-size: 24px;
 	white-space: nowrap;
 }
@@ -112,40 +139,54 @@ header nav ul li a:hover {
 	color: #1375f8;
 }
 
+.mobile-menu {
+	display: none;
+}
+
 /*main style*/
 
 main {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	background: #fafafa;
 }
 
 /*first block style*/
 
 main .first {
-	background: url(../images/mainback.png);
+	background: url(../images/mainback.png), #000000;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	width: 100vw;
 	height: 100vh;
 	position: relative;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	width: 100%;
 }
 
 main .first h1 {
 	color: #fff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -166,26 +207,37 @@ main .first h1::after {
 }
 
 main .first .icons {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: absolute;
 	top: 70vh;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 
 main .first .icons .icons-item {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-left: 40px;
 	margin-right: 40px;
 }
@@ -195,10 +247,17 @@ main .first .icons .icons-item .icons-item-img {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+	        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
 }
 
 main .first .icons .icons-item .icons-item-img img {
@@ -212,7 +271,7 @@ main .first .icons .icons-item:nth-child(2) .icons-item-img img {
 
 main .first .icons .icons-item .icons-item-text {
 	color: #fff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 22px;
 	text-align: center;
 	font-weight: 400;
@@ -227,10 +286,11 @@ main .first .icons .icons-item .icons-item-text {
 }*/
 
 .second-wrapper {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding-top: 50px;
 	background: #fafafa;
@@ -239,7 +299,7 @@ main .first .icons .icons-item .icons-item-text {
 
 .second h2 {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -269,7 +329,7 @@ main .first .icons .icons-item .icons-item-text {
 .second-wrapper .ul-container .tabs-heading {
 	margin-bottom: 30px;
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 36px;
 	font-weight: 400;
 }
@@ -298,41 +358,87 @@ ul.tabs li {
 	color: #ccc;
 	overflow: hidden;
 	position: relative;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
 	margin-right: 50px;
+	margin-bottom: 50px;
+	width: 25%;
 }
 
 /*.tab_last { border-right: 1px solid #333; }*/
 
 ul.tabs li .tab-content {
-	width: 296px;
+	width: 100%;
 	height: auto;
 	background: #fff;
-	box-shadow: inherit;
+	-webkit-box-shadow: inherit;
+	        box-shadow: inherit;
 }
 
 ul.tabs li .tab-image {
-	width: 296px;
-	height: 232px;
+	width: 100%; 
+	height: 200px;
 }
 
 ul.tabs li .tab-image.tab1 {
-	background: url(../images/services/site.png);
-	background-size: 225px 225px;
+	background-image: url(../images/services/001.png);
+	background-size: 75% auto;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 ul.tabs li .tab-image.tab2 {
-	background: url(../images/services/socialmedia600.jpg);
-	background-size: 225px 225px;
+	background-image: url(../images/services/002.png);
+	background-size: 75% auto;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 ul.tabs li .tab-image.tab3 {
-	background: url(../images/services/site.png);
-	background-size: 225px 225px;
+	background-image: url(../images/services/003.png);
+	background-size: 75% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab4 {
+	background-image: url(../images/services/004.png);
+	background-size: 75% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab5 {
+	background-image: url(../images/services/005.png);
+	background-size: 75% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab6 {
+	background-image: url(../images/services/006.png);
+	background-size: 75% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab7 {
+	background-image: url(../images/services/007.png);
+	background-size: auto 75%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab8 {
+	background-image: url(../images/services/008.png);
+	background-size: 75% auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+ul.tabs li .tab-image.tab9 {
+	background-image: url(../images/services/009.png);
+	background-size: 75% auto;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
@@ -341,7 +447,7 @@ ul.tabs li .tab-text {
 	width: 100%;
 	color: #fff;
 	text-align: center;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 22px;
 	background-color: #4a4a4a;
 	padding-top: 5px;
@@ -372,22 +478,28 @@ ul.tabs li.active .tab-content .tab-text {
 	/*border: 1px solid #333;*/
 	border-top: none;
 	max-width: 678px;
+	max-height: 1180px;
 	background: #fff;
 	overflow: auto;
-	box-sizing: border-box;
-	margin-left: 50px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin-left: 1%;
+	margin-right: 10%;
+	padding: 0 40px;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
 }
 
 .tab_container h2 {
 	color: #fff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 22px;
 	text-align: center;
 	font-weight: 400;
 	background-color: #1375f8;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin: 0 -40px;
 }
 
 .tab_container h2::after {
@@ -402,7 +514,7 @@ ul.tabs li.active .tab-content .tab-text {
 	padding-left: 40px;
 	padding-right: 40px;
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 }
 
 .tab_content .tab_content_inner p {
@@ -446,7 +558,7 @@ ul.tabs li.active .tab-content .tab-text {
   	line-height: 45px;
  	width: 45px;
   	height: 45px;
-  	font-family: "Rubik";
+  	/*font-family: "Rubik";*/
 	font-size: 28px;
 	font-weight: 400;
 	position: absolute;
@@ -460,7 +572,7 @@ ul.tabs li.active .tab-content .tab-text {
 
 .tab_drawer_heading { display: none; }
 
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 1290px) {
 	.tabs {
 		display: none;
 	}
@@ -474,7 +586,6 @@ ul.tabs li.active .tab-content .tab-text {
 		cursor: pointer;
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
-		-khtml-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
@@ -484,14 +595,14 @@ ul.tabs li.active .tab-content .tab-text {
 		color: #fff;
 	}
 }
-
+*/
 /*second slick*/
 
 .slider_heading {
 	padding-left: 40px;
 	padding-right: 40px;
 	color: #1375f8;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 22px;
 	font-weight: 500;
 }
@@ -503,7 +614,8 @@ ul.tabs li.active .tab-content .tab-text {
 
 .sl--slide img {
 	margin: 0 auto;
-	width: 250px;
+	max-width: 250px;
+	border: 1px solid #1375f8;
 }
 
 .sl .slick-prev {
@@ -535,7 +647,7 @@ ul.tabs li.active .tab-content .tab-text {
 	font-size: 10px;
 }
 
-/*second lightbox*/
+/*lightbox*/
 
 /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
@@ -563,7 +675,6 @@ uncomment this part if you haven't added this code anywhere else
 	opacity: 0;
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
 	-o-transition: all 0.3s ease-out; 
 	transition: all 0.3s ease-out;
 }
@@ -585,7 +696,7 @@ uncomment this part if you haven't added this code anywhere else
 /*third block style*/
 
 .third {
-	background: url(../images/mainback.png);
+	background: url(../images/mainback.png), #000000;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
@@ -596,7 +707,7 @@ uncomment this part if you haven't added this code anywhere else
 
 .third-wrapper h2 {
 	color: #ffffff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -620,37 +731,50 @@ uncomment this part if you haven't added this code anywhere else
 
 .third-wrapper .third-content {
 	margin-top: 50px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	width: 100%;
 }
 
 .third-wrapper .third-content .third-content-photo {
 	margin-right: 5%;
 	margin-left: 5%;
-	flex: 1 2 30%;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 2 auto;
+	        flex: 1 2 auto;
 }
 
 .third-wrapper .third-content .third-content-photo img {
-	width: 550px;
-	height: 550px;
+	width: 100%;
+	min-width: 257px;
+	height: auto;
 }
 
 .third-wrapper .third-content .third-content-text {
 	color: #ffffff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	text-align: center;
 	font-weight: 400;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column;
-	align-items: center;
-	flex: 2 1 70%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 2;
+	    -ms-flex: 2 1 auto;
+	        flex: 2 1 auto;
 }
 
 .third-content-text-figures {
@@ -663,24 +787,37 @@ uncomment this part if you haven't added this code anywhere else
 	margin-top: 0;
 }
 
+
 .box {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex-flow: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row;
+	        flex-flow: row;
 } 
 
 .box .figure {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .box .figure {
@@ -742,7 +879,7 @@ uncomment this part if you haven't added this code anywhere else
 
 .fourth-wrapper .clients h2 {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -765,13 +902,15 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .fourth-wrapper .clients .logos {
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: repeat (6, 1fr);
 	grid-template-areas: 
 	'a a b b c c'
 	'd e e f f g';
 	justify-items: center;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	grid-row-gap: 60px;
 	grid-column-gap: 30px;
 	margin-top: 40px;
@@ -783,29 +922,48 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .fourth-wrapper .clients .logos img[alt="nordman"] {
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
 	grid-area: a;
 }
 
 .fourth-wrapper .clients .logos img[alt="markspace"] {
+	-ms-grid-row: 1;
+	-ms-grid-column: 5;
+	-ms-grid-column-span: 3;
 	grid-area: b;
 }
 
 .fourth-wrapper .clients .logos img[alt="endo"] {
+	-ms-grid-row: 1;
+	-ms-grid-column: 9;
+	-ms-grid-column-span: 3;
 	grid-area: c;
 	max-height: 70px;
 }
 
 .fourth-wrapper .clients .logos img[alt="deneum"] {
+	-ms-grid-row: 3;
+	-ms-grid-column: 3;
+	-ms-grid-column-span: 3;
 	grid-area: e;
 }
 
 .fourth-wrapper .clients .logos img[alt="markmoda"] {
+	-ms-grid-row: 3;
+	-ms-grid-column: 7;
+	-ms-grid-column-span: 3;
 	grid-area: f;
+}
+
+.fourth-wrapper .reviews {
+	padding: 0 40px;
 }
 
 .fourth-wrapper .reviews h2 {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -836,21 +994,25 @@ uncomment this part if you haven't added this code anywhere else
 
 .sl3--slide .slide-content {
 	margin: 30px auto;
-	width: 550px;
-	height: 355px;
+	width: 60%;
+	height: auto;
 	background: #ffffff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+	        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 	padding: 50px;
 }
 
 .sl3--slide .slide-content .author {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .sl3--slide .slide-content .author img {
@@ -860,7 +1022,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .name {
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-weight: 400;
 }
 
@@ -877,7 +1039,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .sl3--slide .slide-content .text p {
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-weight: 400;
 	font-size: 20px;
 	margin-top: 80px;
@@ -909,20 +1071,19 @@ uncomment this part if you haven't added this code anywhere else
 /*fifth wrapper*/
 
 .fifth {
-	background: url(../images/mainback.png);
+	background: url(../images/mainback.png), #000000;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	color: #fff;
 }
 
 .fifth-wrapper {
-	max-width: 1650px;
-	margin: 0 auto;
+	padding: 0 40px;
 }
 
 .fifth-wrapper h2 {
 	color: #ffffff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 60px;
 	text-align: center;
 	font-weight: 400;
@@ -945,33 +1106,46 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .fifth-wrapper-content {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 230px;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	max-width: 1650px;
+	margin: 0 auto 230px;
 }
 
 .fifth-wrapper-item {
 	background: rgba(0, 0, 0, 0.5);
-	width: 458px;
+	width: 100%;
 	height: 522px;
 	border-radius: 5px;
-	display: -webkit-flex;
+	margin: 0 10px;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .fifth-wrapper-item h3 {
 	color: #ffffff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 48px;
 	text-align: center;
 	font-weight: 400;
@@ -979,7 +1153,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .fifth-wrapper-item .text .price {
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 72px;
 	text-align: center;
 	font-weight: 400;
@@ -999,7 +1173,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .fifth-wrapper-item .text .month {
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 36px;
 	line-height: 0.5;
 	text-align: center;
@@ -1008,48 +1182,49 @@ uncomment this part if you haven't added this code anywhere else
 
 .fifth-wrapper-item a {
 	color: #ffffff;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 48px;
 	line-height: 48px;
 	text-align: center;
 	font-weight: 400;
 	border: 3px solid #ffffff;
-	padding: 16px 58px;
+	padding: 2% 10%;
 	margin-bottom: 30px;
 }
 
 .fifth-wrapper-item a:hover {
-	box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.55);
+	-webkit-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.55);
+	        box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.55);
 	background-color: #444444;
 }
 
 /*popup styles*/
 
-#popup {
+#popup, #popup2, #popup3 {
 	background: white;
 	padding: 50px 50px;
 	text-align: left;
 	max-width: 400px;
 	margin: 40px auto;
 	position: relative;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-weight: 400;
 }
 
-#popup h3 {
+#popup h3, #popup2 h3, #popup3 h3 {
 	font-size: 48px;
 	color: #1375f8;
 }
 
-#popup p {
+#popup p, #popup2 p, #popup3 p {
 	font-size: 24px;
 }
 
-#popup ul {
+#popup ul, #popup2 ul, #popup3 ul {
 	margin-bottom: 50px;
 }
 
-#popup li {
+#popup li, #popup2 li, #popup3 li {
 	list-style: none;
 	/*text-indent: -1.3em;*/
 	font-size: 24px;
@@ -1057,7 +1232,7 @@ uncomment this part if you haven't added this code anywhere else
 	position: relative;
 }
 
-#popup li::before {
+#popup li::before, #popup2 li::before, #popup3 li::before {
 	content: "\002B";
 	/*padding-right: 10px;*/
 	color: #1375f8;
@@ -1066,7 +1241,7 @@ uncomment this part if you haven't added this code anywhere else
 	left: -25px;
 }
 
-#popup a {
+#popup a, #popup2 a, #popup3 a {
 	color: #ffffff;
 	background-color: #1375f8;
 	line-height: 36px;
@@ -1078,10 +1253,6 @@ uncomment this part if you haven't added this code anywhere else
 	font-size: 30px;
 }
 
-
-
-
-
 /**
  * Fade-zoom animation for first dialog
  */
@@ -1091,16 +1262,13 @@ uncomment this part if you haven't added this code anywhere else
 	opacity: 0;
 
 	-webkit-transition: all 0.2s ease-in-out; 
-	-moz-transition: all 0.2s ease-in-out; 
 	-o-transition: all 0.2s ease-in-out; 
 	transition: all 0.2s ease-in-out; 
 
 
 
 	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
 	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
 	transform: scale(0.8); 
 }
 
@@ -1109,18 +1277,14 @@ uncomment this part if you haven't added this code anywhere else
 	opacity: 1;
 
 	-webkit-transform: scale(1); 
-	-moz-transform: scale(1); 
 	-ms-transform: scale(1); 
-	-o-transform: scale(1); 
 	transform: scale(1); 
 }
 
 /* animate out */
 .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
 	-webkit-transform: scale(0.8); 
-	-moz-transform: scale(0.8); 
 	-ms-transform: scale(0.8); 
-	-o-transform: scale(0.8); 
 	transform: scale(0.8); 
 
 	opacity: 0;
@@ -1130,7 +1294,6 @@ uncomment this part if you haven't added this code anywhere else
 .my-mfp-zoom-in.mfp-bg {
 	opacity: 0;
 	-webkit-transition: opacity 0.3s ease-out; 
-	-moz-transition: opacity 0.3s ease-out; 
 	-o-transition: opacity 0.3s ease-out; 
 	transition: opacity 0.3s ease-out;
 }
@@ -1147,14 +1310,17 @@ uncomment this part if you haven't added this code anywhere else
 /*Footer style*/
 
 footer {
-	flex: 0 0 auto;
-	box-sizing: border-box;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	background: #fafafa;
 }
 
 footer h2 {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 48px;
 	text-align: center;
 	font-weight: 400;
@@ -1175,19 +1341,21 @@ footer h2::after {
 }
 
 footer .f-content {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
 
 footer .contacts a {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 36px;
 	text-align: center;
 	font-weight: 400;
@@ -1204,7 +1372,7 @@ footer .contacts .phone {
 
 footer .contacts .phone::before {
 	content: "";
-	background: url(../images/icons/svg/call-answer.svg);
+	background-image: url(../images/icons/svg/call-answer.svg);
 	background-size: 36px 36px;
 	width: 36px;
 	height: 36px;
@@ -1219,7 +1387,7 @@ footer .contacts .email {
 
 footer .contacts .email::before {
 	content: "";
-	background: url(../images/icons/svg/mail.svg);
+	background-image: url(../images/icons/svg/mail.svg);
 	background-size: 36px 36px;
 	width: 36px;
 	height: 36px;
@@ -1229,19 +1397,27 @@ footer .contacts .email::before {
 }
 
 footer .social {
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 footer .social .social-text {
 	color: #4a4a4a;
-	font-family: "Rubik";
+	/*font-family: "Rubik";*/
 	font-size: 36px;
 	text-align: center;
 	font-weight: 400;
@@ -1249,12 +1425,15 @@ footer .social .social-text {
 
 footer .social .social-icons {
 	margin-top: 20px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 footer .social .social-icons img {
@@ -1264,4 +1443,3 @@ footer .social .social-icons img {
 	margin-left: 10px;
 	margin-right: 10px;
 }
-

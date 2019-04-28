@@ -350,4 +350,12 @@
 	.sl3 .slick-prev::before, .sl3 .slick-next::before {
 		display: none;
 	}
+
+	.sl2 {
+		max-width: 300px;
+	}
+
+	.fourth-wrapper .clients .logos img {
+		max-width: 280px;
+	}
 }

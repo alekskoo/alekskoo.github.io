@@ -319,6 +319,12 @@
 		text-align: center;
 	}
 
+	#popup a, #popup2 a, #popup3 a {
+	line-height: 20px;
+	padding: 2% 10%;
+	font-size: 20px;
+}
+
 	footer .contacts a {
 		font-size: 24px;
 	}

@@ -298,7 +298,7 @@
 		margin-right: 5%;
 	}
 
-	.figure-text {
+	.box .figure .figure-text {
 		white-space: nowrap;
 		font-size: 20px;
 	}
